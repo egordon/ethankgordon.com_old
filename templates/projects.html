@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<a style="color: black; outline: 0" href="javascript:toggleCurrent()"><h2>Current<span style="float: right; transform: rotate(-90deg); transform-origin: 50% 50%" id="currentSymbol">▼</span></h2></a>
+<style>
+section {
+    padding: 5px;
+}
+</style>
+<div id="currentProjects" style="visibility: hidden; display: none">
+<section>
+<img style="max-width: 250px;" src="{% static "projects/img/family.png" %}" />
+<h3>Django Simple Family Tree</h3>
+<p>This is the simple family tree app used on this website to keep track of <a href="/family">my own family history.</a> All apps on this website, if possible, will be open-source.</p>
+<p><a href="https://github.com/egordon/django-family">Github</a></p>
+<div style="clear: both;"></div>
+</section>
+</div>
+<hr />
+<a style="color: black; outline: 0" href="javascript:togglePast()"><h2>Completed<span style="float: right; transform: rotate(-90deg); transform-origin: 50% 50%" id="pastSymbol">▼</span></h2></a>
+<div id="pastProjects" style="visibility: hidden; display: none">
+<section>
+<img style="max-width: 250px;" src="{% static "projects/img/thesis.png" %}" />
+<h3>Photonic Neural Network Design</h3>
+<h4><em>Undergraduate Thesis</em></h4>
+<p>Neural networks can very effectively perform multidimensional nonlinear classification. However, electronic networks suffer from significant bandwidth limitations due to carrier lifetimes and capacitive coupling. This project investigates photonic neural networks that can get
+around these limitations by performing both the activation function and weighted addition
+in the optical domain using microring resonators.</p>
+<p><a href="{% static "projects/Gordon_Senior_Thesis.pdf" %}">Download</a></p>
+<div style="clear: both;"></div>
+</section>
+<section>
+<img style="max-width: 250px;" src="{% static "projects/img/iw.png" %}" />
+<h3>Multi-Mode Network Design</h3>
+<h4><em>Junior Year Independent Work</em></h4>
+<p>This work consists of three experimental designs ready for fabrication, each of which investigates the process of expanding Photonic Neural Network technology to include Mode-Division Multiplexing.</p>
+<p><a href="{% static "projects/Gordon_Junior_IW.pdf" %}">Download</a></p>
+<div style="clear: both;"></div>
+</section>
+<section>
+<img style="max-width: 250px;" src="{% static "projects/img/carlab.jpg" %}" />
+<h3>Ball Catching Robot</h3>
+<h4><em>Princeton ELE Car Lab 2016</em></h4>
+<p>In the face of multiple partially-successful attempts in years past, the goal of this project was to build a robot that could catch a ball in real time.</p>
+<p><a href="{% static "projects/Gordon_CarLab.pdf" %}">Download</a></p>
+<div style="clear: both;"></div>
+</section>
+</div>
+<script>
+function togglePast() {
+    el = document.getElementById("pastProjects");
+    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible" ;
+    el.style.display = (el.style.display == "none") ? "block" : "none" ;
+    sym = document.getElementById("pastSymbol");
+    sym.style.transform = (sym.style.transform == "rotate(-90deg)") ? "rotate(0deg)" : "rotate(-90deg)" ;
+}
+function toggleCurrent() {
+    el = document.getElementById("currentProjects");
+    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible" ;
+    el.style.display = (el.style.display == "none") ? "block" : "none" ;
+    sym = document.getElementById("currentSymbol");
+    sym.style.transform = (sym.style.transform == "rotate(-90deg)") ? "rotate(0deg)" : "rotate(-90deg)" ;
+}
+</script>
+{% endblock %}

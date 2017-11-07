@@ -1,0 +1,3 @@
+[submodule "family"]
+	path = family
+	url = git@github.com:egordon/django-family.git
