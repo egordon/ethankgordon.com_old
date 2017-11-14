@@ -5,6 +5,10 @@ def index(request):
     current = 'home'
     return render(request, 'index.html', locals())
 
+def contact(request):
+    current = 'home'
+    return render(request, 'contact.html', locals())
+
 def projects(request):
     current = 'projects'
     return render(request, 'projects.html', locals())

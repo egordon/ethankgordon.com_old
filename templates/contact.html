@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block head %}
+<script>
+function resizeframe() {
+	window.frames[0].style.width = window.innerWidth;
+}
+
+function setupframe(obj) {
+	window.onresize = resizeframe;
+	obj.style.width = window.innerWidth;
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>Contact</h1>
+<h5>ethan &lt;at&gt; ethankgordon &lt;dot&gt; com</h5>
+<h5>Facebook: <a href="https://fb.com/ekgekg">fb.com/ekgekg</a></h5>
+<h5>LinkedIn: <a href="https://www.linkedin.com/in/ekgordon/">ekgordon</a></h5>
+<h5>Github: <a href="https://github.com/egordon">egordon</a></h5>
+<iframe src="https://flowcrypt.com/me/ekgordon2" style="margin-top: -10px; width: 800px; height: 730px; border: none" scrolling="no"></iframe>
+{% endblock %}

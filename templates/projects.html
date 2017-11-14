@@ -4,65 +4,399 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
-<a style="color: black; outline: 0" href="javascript:toggleCurrent()"><h2>Current<span style="float: right; transform: rotate(-90deg); transform-origin: 50% 50%" id="currentSymbol">▼</span></h2></a>
-<style>
-section {
-    padding: 5px;
-}
+
+<style type="text/css">
+    .column {
+        float: left;
+        width: 520px;
+        padding: 5px;
+    }
+
+    .imgcol {
+        float: left;
+        width: 240px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .imgcol img {
+        padding: 0;
+    }
+
+    .nopad {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .imgcol nav ul li {
+        float: right;
+    }
+
+    @media (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+        .imgcol {
+            width: 100%;
+        }
+    }
+
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 </style>
-<div id="currentProjects" style="visibility: hidden; display: none">
-<section>
-<img style="max-width: 250px;" src="{% static "projects/img/family.png" %}" />
-<h3>Django Simple Family Tree</h3>
-<p>This is the simple family tree app used on this website to keep track of <a href="/family">my own family history.</a> All apps on this website, if possible, will be open-source.</p>
-<p><a href="https://github.com/egordon/django-family">Github</a></p>
-<div style="clear: both;"></div>
+
+<h1>Projects</h1>
+
+<section class="nopad">
+    <h2>Research / Curricular</h2>
+    <section class="nopad">
+        <h3>Photonic Neural Network Design, Control, and Simulation</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/thesis.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    This independent project investigates the design and control of photonic neural networks. I focused on the thermal control and calibration of network components, as well as demonstrating that the network dynamics were sufficient to solve standard non-linear classification problems.
+                </p>
+                <p>
+                    Additionally, as a component of this thesis, I crated LightLab, a general laboratory simulation environment. All calibration and training procedures in this thesis could be tested on simulated laboratory instruments. This allowed for good agreement between simulated and empirical results.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href='{% static "projects/Gordon_Ethan_Thesis.pptx" %}'>Slides</a></li>
+                        <li><a href='{% static "projects/thesis_poster.pdf" %}'>Poster</a></li>
+                        <li><a href='{% static "projects/Gordon_Senior_Thesis.pdf" %}'>Paper</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>LightLab is currently closed-source by Princeton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>Ball Catcher</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/carlab.jpg" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>An quasi-independent project (due to some unforeseen circumstances) for Car Lab (ELE 302), Ball Catcher was designed to track and catch a thrown projectile. I had to design and build the chassis and holonomic drivetrain to maximize the catch radius, design and wire four H-Bridges for responsive current deliver, and implement a controller to predict the landind position of the projectile and guide the robot in that direction.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/CarLab">Source/CAD</a></li>
+                        <li><a href='{% static "projects/Gordon_CarLab.pdf" %}'>Paper</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Implementation and Design is Open-Source. Presented at Princeton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>Integrated Power-Efficient Quantum Randomness</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/spad.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    In this partner project, we designed an integrated 
+system to utilize quantam 
+randomness in linear optics. Compared to classical pseudo-random schemes, we determined that this system (along with other similar systems) is not power efficient for a practical number of bits with current single-photon avalanche diode technology.
+
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href='{% static "projects/VLSI_Presentation.pptx" %}'>Slides</a></li>
+                        <li><a href='{% static "projects/VLSI_Final.pdf" %}'>Paper</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Final investigation was not published due to negative results.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>Mode Division Multiplexed Weight Bank Design</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/mdm.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    This independent project consists of three experimental designs ready for fabrication, each of which investigates the process of expanding neuromorphic photonic technology to include spatial mode division multiplexing.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href='{% static "projects/Gordon_IW_Poster.pdf" %}'>Poster</a></li>
+                        <li><a href='{% static "projects/Gordon_Junior_IW.pdf" %}'>Paper</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Fabrication and experimentation in progress. Presentation at Princeton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>CoinJoin</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/coinjoin.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>An partner project for the Cryptocurrencies Graduate Seminar (COS 597E), this is an implementation of the <a href="https://en.bitcoin.it/wiki/CoinJoin">CoinJoin</a> algorithm. It takes advantage of the multi-output property of bitcoin transactions to grant true anonymity instead of just pseudonymity.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/CoinJoin">Source</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=XaVfD5c-fd4">Video</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Implementation is Open-Source. Presented at Princeton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
 </section>
-</div>
 <hr />
-<a style="color: black; outline: 0" href="javascript:togglePast()"><h2>Completed<span style="float: right; transform: rotate(-90deg); transform-origin: 50% 50%" id="pastSymbol">▼</span></h2></a>
-<div id="pastProjects" style="visibility: hidden; display: none">
-<section>
-<img style="max-width: 250px;" src="{% static "projects/img/thesis.png" %}" />
-<h3>Photonic Neural Network Design</h3>
-<h4><em>Undergraduate Thesis</em></h4>
-<p>Neural networks can very effectively perform multidimensional nonlinear classification. However, electronic networks suffer from significant bandwidth limitations due to carrier lifetimes and capacitive coupling. This project investigates photonic neural networks that can get
-around these limitations by performing both the activation function and weighted addition
-in the optical domain using microring resonators.</p>
-<p><a href="{% static "projects/Gordon_Senior_Thesis.pdf" %}">Download</a></p>
-<div style="clear: both;"></div>
+<section class="nopad">
+    <h2>Work / Extracurricular</h2>
+    <section class="nopad">
+        <h3>LittleBRO: Brown Robotics Olympiad</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/littlebro.jpg" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>In this small-team project (for which I participated in 2014 and mentored in 2017), we designed to build a little robot to autonomously solve a maze.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/LittleBRO">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Competed at Brown.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>EMP: Encrypted Messaging Protocol</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/emp.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    An independently designed protocol and prototype for a now-defunct start-up, EMP is a encrypted, distributed messaging platform similar to BitMessage, but with higher bandwidth and added privacy features.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/encryptedmessaging/emp">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Competed at Brown.</i>
+                </p>
+            </div>
+        </div>
+    </section>
 </section>
-<section>
-<img style="max-width: 250px;" src="{% static "projects/img/iw.png" %}" />
-<h3>Multi-Mode Network Design</h3>
-<h4><em>Junior Year Independent Work</em></h4>
-<p>This work consists of three experimental designs ready for fabrication, each of which investigates the process of expanding Photonic Neural Network technology to include Mode-Division Multiplexing.</p>
-<p><a href="{% static "projects/Gordon_Junior_IW.pdf" %}">Download</a></p>
-<div style="clear: both;"></div>
+<hr />
+<section class="nopad">
+    <h2>Personal / Hacks</h2>
+    <section class="nopad">
+        <h3>Stasl: Localized Subtitles</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/stasl.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    This small group hack aids the deaf and hard-of-hearing by telling the user <i>where</i> speech is coming from in addition to providing standard speech-to-text subtitles.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/Stasl">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Presented at Greylock Hackfest.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>P-Auth: Hands-Free Authentication</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/pauth.jpg" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    P-Auth allows users to authenticate based on eye movements using the face recognition API of Project Oxford. Users first register 
+by training a face with a single picture. They can then login by sending two pictures of their face that differ only through pupil movement in a 
+random direction as dictated by the server.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/itdelatrisu/hp-f2015">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Presented at HackPrinceton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>ASL Letter Transcriber</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/asl.jpg" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    This small group hack uses trained contours to transcribe indivisual American Sign Language (ASL) letters in real time. While originally written to take advantage of mobile platforms, the code works cross-platform.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/ASLTegra">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Presented at HackPrinceton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>BTC Oracle</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/btcoracle.jpg" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+BTC Oracle provides a means to create a cryptographically enforced contract based on arbitrary conditions written in python. We also developed a 
+local application that runs alongside your existing bitcoin wallet (bitcoind) and provides an interface to the oracle itself. More information about 
+oracles can be found on the <a href="https://en.bitcoin.it/wiki/Oracle">Bitcoin Wiki</a>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/btcoracle">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Presented at HackPrinceton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
+        <h3>Django Family Tree </h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/family.png" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    This is the simple family tree app used on this website to keep track of my own family history
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="/family">Site</a></li>
+                        <li><a href="https://github.com/egordon/django-family">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source.</i>
+                </p>
+            </div>
+        </div>
+    </section>
 </section>
-<section>
-<img style="max-width: 250px;" src="{% static "projects/img/carlab.jpg" %}" />
-<h3>Ball Catching Robot</h3>
-<h4><em>Princeton ELE Car Lab 2016</em></h4>
-<p>In the face of multiple partially-successful attempts in years past, the goal of this project was to build a robot that could catch a ball in real time.</p>
-<p><a href="{% static "projects/Gordon_CarLab.pdf" %}">Download</a></p>
-<div style="clear: both;"></div>
-</section>
-</div>
-<script>
-function togglePast() {
-    el = document.getElementById("pastProjects");
-    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible" ;
-    el.style.display = (el.style.display == "none") ? "block" : "none" ;
-    sym = document.getElementById("pastSymbol");
-    sym.style.transform = (sym.style.transform == "rotate(-90deg)") ? "rotate(0deg)" : "rotate(-90deg)" ;
-}
-function toggleCurrent() {
-    el = document.getElementById("currentProjects");
-    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible" ;
-    el.style.display = (el.style.display == "none") ? "block" : "none" ;
-    sym = document.getElementById("currentSymbol");
-    sym.style.transform = (sym.style.transform == "rotate(-90deg)") ? "rotate(0deg)" : "rotate(-90deg)" ;
-}
-</script>
+
 {% endblock %}

@@ -4,18 +4,20 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<img src="{% static "img/ethan.jpg" %}" alt="Image of Ethan" style="float: left"/>
 <section>
+	<img src="{% static "img/ethan.jpg" %}" alt="Image of Ethan" />
 	<p>Currently, I work for <a href="https://www.oculus.com/">Oculus</a> on core tracking technologies.
 	While my undergraduate study focused on engineering physics and silicon photonics, I really wish to pivot
-	towards human-computer and human-robot interaction. My ultimate goal is to expand human knowledge in
-	Computer Science and Electrical Engineering not	just for its own sake, but to advance the human condition.
+	towards human-computer and human-robot interaction. My professional goal is to expand human knowledge in
+	Computer Science and Electrical Engineering not	just for its own sake, but to advance the human condition.</p>
 	<h3>Web Philosophy</h3>
 	<p>Based off of <a href="http://motherfuckingwebsite.com" 
 	onclick="return confirm('Warning: External site with strong language')">
 	this scathing diatribe</a>, the goal of this site is to be simple and 
 	lightweight place for learning and practice. As much as reasonably possible,
 	I have tried to homebrew everything.</p>
+</section>
+<section style="float: right">
 <h3>Quick Links</h3>
 <nav><ul>
 	<li><a href="{% static "CV.pdf" %}">CV</a></li>
