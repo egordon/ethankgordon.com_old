@@ -14,6 +14,13 @@ function setupframe(obj) {
 	obj.style.width = window.innerWidth;
 }
 </script>
+
+<style type="text/css">
+    h5 {
+        margin-top; 10px;
+        margin-bottom: 10px;
+    }
+</style>
 {% endblock %}
 
 {% block content %}
@@ -22,5 +29,7 @@ function setupframe(obj) {
 <h5>Facebook: <a href="https://fb.com/ekgekg">fb.com/ekgekg</a></h5>
 <h5>LinkedIn: <a href="https://www.linkedin.com/in/ekgordon/">ekgordon</a></h5>
 <h5>Github: <a href="https://github.com/egordon">egordon</a></h5>
-<iframe src="https://flowcrypt.com/me/ekgordon2" style="margin-top: -10px; width: 800px; height: 730px; border: none" scrolling="no"></iframe>
+<div style="width: 800px; height: 500px; overflow: hidden">
+<iframe src="https://flowcrypt.com/me/ekgordon2" style="position: relative; top: -255px; width: 800px; height: 740px; border: none" scrolling="no"></iframe>
+</div>
 {% endblock %}

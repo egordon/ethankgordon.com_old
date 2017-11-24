@@ -6,7 +6,7 @@ def index(request):
     return render(request, 'index.html', locals())
 
 def contact(request):
-    current = 'home'
+    current = 'contact'
     return render(request, 'contact.html', locals())
 
 def projects(request):

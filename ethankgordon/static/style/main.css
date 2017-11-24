@@ -8,10 +8,11 @@ section {
 }
 
 html, body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans';
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	font-size: 20px;
 }
 
 .topHeader {
@@ -76,7 +77,7 @@ nav li a {
 	color: white;
 	background-color: #013220;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 10px 12px;
 }
 
 nav li a:hover {
@@ -111,7 +112,7 @@ nav li a:hover {
 
 .wrapper {
 	min-height: 100%;
-	margin-bottom: -100px;
+	margin-bottom: -110.5px;
 }
 
 main {
@@ -129,7 +130,11 @@ footer {
 	box-sizing: border-box;
 	text-align: center;
 	color: #AAA;
-	font-size: small;
+	font-size: medium;
+}
+
+footer p {
+	margin-bottom: 0;
 }
 
 footer ul {
@@ -163,7 +168,8 @@ footer a:visited {
 
 section img {
 	float: left;
-	padding: 10px;
+	border-radius: 10px;
+	margin-right: 30px;
 }
 
 section {

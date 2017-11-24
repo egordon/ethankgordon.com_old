@@ -8,13 +8,13 @@
 <style type="text/css">
     .column {
         float: left;
-        width: 510px;
+        width: 500px;
         padding-left: 20px;
     }
 
     .imgcol {
         float: left;
-        width: 240px;
+        width: 250px;
         padding: 5px;
         text-align: center;
     }
@@ -30,6 +30,7 @@
 
     .imgcol nav ul li {
         float: right;
+        height: inherit;
     }
 
     @media (max-width: 600px) {
@@ -65,7 +66,7 @@
                     This independent project investigates the design and control of photonic neural networks. I focused on the thermal control and calibration of network components, as well as demonstrating that the network dynamics were sufficient to solve standard non-linear classification problems.
                 </p>
                 <p>
-                    Additionally, as a component of this thesis, I crated LightLab, a general laboratory simulation environment. All calibration and training procedures in this thesis could be tested on simulated laboratory instruments. This allowed for good agreement between simulated and empirical results.
+                    Additionally, as a component of this thesis, I created LightLab, a general laboratory simulation environment. All calibration and training procedures in this thesis could be tested on simulated laboratory instruments. This allowed for good agreement between simulated and empirical results.
                 </p>
             </div>
         </div>
@@ -93,7 +94,7 @@
                 <img src='{% static "projects/img/carlab.jpg" %}' width="100%" />
             </div>
             <div class="column">
-                <p>An quasi-independent project (due to some unforeseen circumstances) for Car Lab (ELE 302), Ball Catcher was designed to track and catch a thrown projectile. I had to design and build the chassis and holonomic drivetrain to maximize the catch radius, design and wire four H-Bridges for responsive current deliver, and implement a controller to predict the landind position of the projectile and guide the robot in that direction.</p>
+                <p>An quasi-independent project (due to some unforeseen circumstances) for Car Lab (ELE 302), Ball Catcher was designed to track and catch a thrown projectile. I had to design and build the chassis and holonomic drivetrain to maximize the catch radius, design and wire four H-Bridges for responsive current deliver, and implement a controller to predict the landing position of the projectile and guide the robot in that direction.</p>
             </div>
         </div>
         <div class="row">
@@ -176,7 +177,7 @@
                 <img src='{% static "projects/img/coinjoin.png" %}' width="100%" />
             </div>
             <div class="column">
-                <p>An partner project for the Cryptocurrencies Graduate Seminar (COS 597E), this is an implementation of the <a href="https://en.bitcoin.it/wiki/CoinJoin">CoinJoin</a> algorithm. It takes advantage of the multi-output property of bitcoin transactions to grant true anonymity instead of just pseudonymity.</p>
+                <p>A partner project for the Cryptocurrencies Graduate Seminar (COS 597E), this is an implementation of the <a href="https://en.bitcoin.it/wiki/CoinJoin">CoinJoin</a> algorithm. It takes advantage of the multi-output property of bitcoin transactions to grant true anonymity instead of just pseudonymity.</p>
             </div>
         </div>
         <div class="row">
@@ -232,7 +233,9 @@
             </div>
             <div class="column">
                 <p>
-                    An independently designed protocol and prototype for a now-defunct start-up, EMP is a encrypted, distributed messaging platform similar to BitMessage, but with higher bandwidth and added privacy features.
+                    A protocol and prototype independently designed 
+and built for a now-defunct start-up, EMP is an encrypted, distributed 
+messaging platform similar to BitMessage, but with higher bandwidth and added privacy features.
                 </p>
             </div>
         </div>
@@ -283,6 +286,33 @@
         </div>
     </section>
     <section class="nopad">
+        <h3>ASL Letter Transcriber</h3>
+        <div class="row">
+            <div class="imgcol">
+                <img src='{% static "projects/img/asl.jpg" %}' width="100%" />
+            </div>
+            <div class="column">
+                <p>
+                    This small group hack uses trained contours to transcribe individual American Sign Language (ASL) letters in real time. While originally written to take advantage of mobile platforms, the code works cross-platform.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="imgcol">
+                <div class="container">
+                    <nav><ul>
+                        <li><a href="https://github.com/egordon/ASLTegra">Source</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    <i>Open-Source. Recognized at HackPrinceton.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="nopad">
         <h3>P-Auth: Hands-Free Authentication</h3>
         <div class="row">
             <div class="imgcol">
@@ -301,33 +331,6 @@ random direction as dictated by the server.
                 <div class="container">
                     <nav><ul>
                         <li><a href="https://github.com/itdelatrisu/hp-f2015">Source</a></li>
-                    </ul></nav>
-                </div>
-            </div>
-            <div class="column">
-                <p>
-                    <i>Open-Source. Recognized at HackPrinceton.</i>
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="nopad">
-        <h3>ASL Letter Transcriber</h3>
-        <div class="row">
-            <div class="imgcol">
-                <img src='{% static "projects/img/asl.jpg" %}' width="100%" />
-            </div>
-            <div class="column">
-                <p>
-                    This small group hack uses trained contours to transcribe indivisual American Sign Language (ASL) letters in real time. While originally written to take advantage of mobile platforms, the code works cross-platform.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="imgcol">
-                <div class="container">
-                    <nav><ul>
-                        <li><a href="https://github.com/egordon/ASLTegra">Source</a></li>
                     </ul></nav>
                 </div>
             </div>
@@ -363,34 +366,6 @@ oracles can be found on the <a href="https://en.bitcoin.it/wiki/Oracle">Bitcoin 
             <div class="column">
                 <p>
                     <i>Open-Source. Presented at HackPrinceton.</i>
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="nopad">
-        <h3>Django Family Tree </h3>
-        <div class="row">
-            <div class="imgcol">
-                <img src='{% static "projects/img/family.png" %}' width="100%" />
-            </div>
-            <div class="column">
-                <p>
-                    This is the simple family tree app used on this website to keep track of my own family history
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="imgcol">
-                <div class="container">
-                    <nav><ul>
-                        <li><a href="/family">Site</a></li>
-                        <li><a href="https://github.com/egordon/django-family">Source</a></li>
-                    </ul></nav>
-                </div>
-            </div>
-            <div class="column">
-                <p>
-                    <i>Open-Source.</i>
                 </p>
             </div>
         </div>
