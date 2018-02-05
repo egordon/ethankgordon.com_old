@@ -4,15 +4,29 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<style>
+.spacer {
+    display: inline-block;
+    width: 10px;
+}
+</style>
 <section>
+	<h3>What's New?</h3>
+	<h3 style="margin-bottom: 0"><i>{{ recentArticle.created }}</i><span class="spacer"></span> » <span class="spacer"></span><a class="titleLink" href="blog/article/{{ recentArticle.slug }}">{{ recentArticle.title }}<img src='{{ recentArticle.category.image.url }}' height='25' alt='{{ recentArticle.category.name }}' style="float: none; padding-left: 10px; display: inline; vertical-align: middle; margin: 0" /></a></h3>
+	<aside><a href="blog/feed">Subscribe via RSS<img src='{% static "blog/feed.svg" %}' height='25' alt='RSS' style="float: none; padding-left: 5px; display: inline; vertical-align: middle" /></a></aside>
+	<hr />
+	<h3>About Me</h3>
 	<img src="{% static "img/ethan.jpg" %}" alt="Image of Ethan" />
-	<p>Currently, I work for <a href="https://www.oculus.com/">Oculus</a> on core tracking technologies.
-	My undergraduate study at Princeton University focused on engineering physics and silicon photonics. Now, I am shifting my focus
+	<p>Currently, I work for <a href="https://www.oculus.com/">Oculus Virtual Reality</a> on core tracking and human understanding technologies with the goal of improving visual comfort.
+	My undergraduate study at Princeton University focused on engineering physics and silicon photonics, and my undergraduate thesis covered the design and control of integrated photonic neural networks.
+	<br />
+	Now, I am shifting my focus
 	towards human-computer and human-robot interaction. My professional goal is to expand human knowledge in
-	Computer Science and Electrical Engineering not	just for its own sake, but to advance the human condition.</p>
+	Computer Science and Electrical Engineering not	just for its own sake, but to understand our human faculties, increase accessibility, and ultimately improve our collective quality of life. My most recent personal projects have targeted the deaf and hard-of-hearing.</p>
+	<p>
+		In my free time, I enjoy singing and playing piano. I am a proud alumnus of <a href="https://acapellago.princeton.edu/">Acapellago</a> and current member of <a href="https://www.facebook.com/MPKacappella/">The Vocal Network</a>.
+	</p>
 	<div style="clear: both"></div>
-</section>
-<section>
 	<h3>Web Philosophy</h3>
 	<p>Based off of <a href="http://motherfuckingwebsite.com" 
 	onclick="return confirm('Warning: External site with strong language')">
@@ -20,5 +34,4 @@
 	lightweight place for learning and practice. As much as reasonably possible,
 	I have tried to homebrew everything.</p>
 </section>
-<div style="clear: both"></div>
 {% endblock %}

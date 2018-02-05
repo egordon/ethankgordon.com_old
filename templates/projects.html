@@ -8,19 +8,21 @@
 <style type="text/css">
     .column {
         float: left;
-        width: 500px;
+        width: 62.5%;
         padding-left: 20px;
     }
 
     .imgcol {
         float: left;
-        width: 250px;
+        width: 31.25%;
         padding: 5px;
         text-align: center;
     }
 
     .imgcol img {
         padding: 0;
+        margin: 0;
+        margin-right: 30px;
     }
 
     .nopad {
@@ -33,12 +35,42 @@
         height: inherit;
     }
 
+    @media (max-width: 800px) {
+        .imgcol nav ul {
+            height: auto;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            position: relative;
+        }
+
+        .imgcol nav ul li {
+            float: none;
+            margin: 10px;
+        }
+
+        .imgcol nav ul li a {
+            border-radius: 10px;
+        }
+    }
+
     @media (max-width: 600px) {
         .column {
             width: 100%;
+            margin: 0;
+            padding: 0;
         }
         .imgcol {
             width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .imgcol img {
+            margin: 0;
+        }
+
+        .imgcol nav ul {
+            width: 50%;
         }
     }
 
@@ -74,9 +106,9 @@
             <div class="imgcol">
                 <div class="container">
                     <nav><ul>
-                        <li><a href='{% static "projects/Gordon_Ethan_Thesis.pptx" %}'>Slides</a></li>
-                        <li><a href='{% static "projects/thesis_poster.pdf" %}'>Poster</a></li>
-                        <li><a href='{% static "projects/Gordon_Senior_Thesis.pdf" %}'>Paper</a></li>
+                        <li><a href='{% static "projects/Gordon_Thesis_Slides.pdf" %}' target="_blank">Slides</a></li>
+                        <li><a href='{% static "projects/thesis_poster.pdf" %}' target="_blank">Poster</a></li>
+                        <li><a href='{% static "projects/Gordon_Senior_Thesis.pdf" %}' target="_blank">Paper</a></li>
                     </ul></nav>
                 </div>
             </div>
@@ -102,7 +134,7 @@
                 <div class="container">
                     <nav><ul>
                         <li><a href="https://github.com/egordon/CarLab">Source/CAD</a></li>
-                        <li><a href='{% static "projects/Gordon_CarLab.pdf" %}'>Paper</a></li>
+                        <li><a href='{% static "projects/Gordon_CarLab.pdf" %}' target="_blank">Paper</a></li>
                     </ul></nav>
                 </div>
             </div>
@@ -130,8 +162,8 @@
             <div class="imgcol">
                 <div class="container">
                     <nav><ul>
-                        <li><a href='{% static "projects/VLSI_Presentation.pptx" %}'>Slides</a></li>
-                        <li><a href='{% static "projects/VLSI_Final.pdf" %}'>Paper</a></li>
+                        <li><a href='{% static "projects/VLSI_Presentation.pdf" %}' target="_blank">Slides</a></li>
+                        <li><a href='{% static "projects/VLSI_Final.pdf" %}' target="_blank">Paper</a></li>
                     </ul></nav>
                 </div>
             </div>
@@ -158,8 +190,8 @@
             <div class="imgcol">
                 <div class="container">
                     <nav><ul>
-                        <li><a href='{% static "projects/Gordon_IW_Poster.pdf" %}'>Poster</a></li>
-                        <li><a href='{% static "projects/Gordon_Junior_IW.pdf" %}'>Paper</a></li>
+                        <li><a href='{% static "projects/Gordon_IW_Poster.pdf" %}' target="_blank">Poster</a></li>
+                        <li><a href='{% static "projects/Gordon_Junior_IW.pdf" %}' target="_blank">Paper</a></li>
                     </ul></nav>
                 </div>
             </div>
@@ -184,6 +216,7 @@
             <div class="imgcol">
                 <div class="container">
                     <nav><ul>
+                        <li><a href='{% static "projects/coinjoin.pdf" %}' target="_blank">Slides</a></li>
                         <li><a href="https://github.com/egordon/CoinJoin">Source</a></li>
                         <li><a href="https://www.youtube.com/watch?v=XaVfD5c-fd4">Video</a></li>
                     </ul></nav>
@@ -259,7 +292,7 @@ messaging platform similar to BitMessage, but with higher bandwidth and added pr
 <section class="nopad">
     <h2>Personal / Hacks</h2>
     <section class="nopad">
-        <h3>Stasl: Localized Subtitles</h3>
+        <h3>STASL: SubTitles And Sound Localization</h3>
         <div class="row">
             <div class="imgcol">
                 <img src='{% static "projects/img/stasl.png" %}' width="100%" />

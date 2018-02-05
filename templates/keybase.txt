@@ -1,0 +1,60 @@
+==================================================================
+https://keybase.io/miramur
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ethankgordon.com
+  * I am miramur (https://keybase.io/miramur) on keybase.
+  * I have a public key ASDJFL3gpRS5J1fXMZ8ZXN7TckHr9Q0b_kujNJn2-Kv5UQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": 
+"0120c914bde0a514b92757d7319f195cded37241ebf50d1bfe4ba33499f6f8abf9510a",
+      "host": "keybase.io",
+      "kid": 
+"0120c914bde0a514b92757d7319f195cded37241ebf50d1bfe4ba33499f6f8abf9510a",
+      "uid": "4bb75f88ad010d8ea5deed67c445d719",
+      "username": "miramur"
+    },
+    "merkle_root": {
+      "ctime": 1512604389,
+      "hash": 
+"00e3dfab0f59c6a474d61038107a49b95b73aacef40a63cc4726246c0f7791e40782ffeffbcd19a66cfe3ff46d71780c5795d5fc593ae857f9b9586cece4063e",
+      "hash_meta": 
+"0d60b9e9f254dade7301c60699c13a8a9d5f4f9a69d6ded656d2f5432def294c",
+      "seqno": 1786245
+    },
+    "service": {
+      "hostname": "ethankgordon.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.36"
+  },
+  "ctime": 1512604444,
+  "expire_in": 504576000,
+  "prev": 
+"cef083c3d458eab6611ff97d7876ff311cc9faf34db121609c3f3e97bf570351",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyRS94KUUuSdX1zGfGVze03JB6/UNG/5LozSZ9vir+VEKp3BheWxvYWTFA0h7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzkxNGJkZTBhNTE0YjkyNzU3ZDczMTlmMTk1Y2RlZDM3MjQxZWJmNTBkMWJmZTRiYTMzNDk5ZjZmOGFiZjk1MTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzkxNGJkZTBhNTE0YjkyNzU3ZDczMTlmMTk1Y2RlZDM3MjQxZWJmNTBkMWJmZTRiYTMzNDk5ZjZmOGFiZjk1MTBhIiwidWlkIjoiNGJiNzVmODhhZDAxMGQ4ZWE1ZGVlZDY3YzQ0NWQ3MTkiLCJ1c2VybmFtZSI6Im1pcmFtdXIifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MTI2MDQzODksImhhc2giOiIwMGUzZGZhYjBmNTljNmE0NzRkNjEwMzgxMDdhNDliOTViNzNhYWNlZjQwYTYzY2M0NzI2MjQ2YzBmNzc5MWU0MDc4MmZmZWZmYmNkMTlhNjZjZmUzZmY0NmQ3MTc4MGM1Nzk1ZDVmYzU5M2FlODU3ZjliOTU4NmNlY2U0MDYzZSIsImhhc2hfbWV0YSI6IjBkNjBiOWU5ZjI1NGRhZGU3MzAxYzYwNjk5YzEzYThhOWQ1ZjRmOWE2OWQ2ZGVkNjU2ZDJmNTQzMmRlZjI5NGMiLCJzZXFubyI6MTc4NjI0NX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJldGhhbmtnb3Jkb24uY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzYifSwiY3RpbWUiOjE1MTI2MDQ0NDQsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiY2VmMDgzYzNkNDU4ZWFiNjYxMWZmOTdkNzg3NmZmMzExY2M5ZmFmMzRkYjEyMTYwOWMzZjNlOTdiZjU3MDM1MSIsInNlcW5vIjoxMCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECu3yMaiQjJDmXLUKnpvLMkVg3mhmcZxnfQcEXb51mlsudhQjASB/z/fZj2iBKEgTU+RZoD2GSrmCN7beev2JgPqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgXhh8MkgsXi9TqqBdx6AgVt7k9Irph5UvosH51lWlXEejdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/miramur
+
+==================================================================

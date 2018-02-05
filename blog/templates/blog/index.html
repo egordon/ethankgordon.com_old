@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+{% load markdown_filter %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<style>
+#aTitle {
+    margin-bottom: 5px;
+}
+
+.titleLink {
+    color: gray;
+}
+
+a:visited .titleLink {
+    color: gray;
+}
+
+cat ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+cat ul li {
+    float: left;
+    padding: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: solid;
+    border-color: #228B22;
+    border-radius: 10px;
+    border-width: 2px;
+    border-bottom-width: 2px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+cat ul li a {
+    display: block;
+    padding: 5px;
+}
+
+.catTab {
+    width: 100%;
+    margin-top: -2px;
+    height: 5px;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #228B22;
+}
+
+.spacer {
+    display: inline-block;
+    width: 10px;
+}
+</style>
+<h2 id="aTitle">Most Recent</h2>
+<section>
+    <h3><i>{{ recentArticle.created }}</i><span class="spacer"></span> » <span class="spacer"></span><a class="titleLink" href="article/{{ recentArticle.slug }}">{{ recentArticle.title }}<img src='{{ recentArticle.category.image.url }}' height='25' alt='{{ recentArticle.category.name }}' style="float: none; padding-left: 10px; display: inline; vertical-align: middle; margin: 0" /></a></h3>
+</section>
+<aside><a href="feed">Subscribe via RSS<img src='{% static "blog/feed.svg" %}' height='25' alt='RSS' style="padding-left: 5px; display: inline; vertical-align: middle" /></a></aside>
+<h2 id="aTitle">By Category</h2>
+<cat>
+<ul>
+{% for c in categories %}
+<li id="{{ c.slug }}Link">
+    <a href="javascript:;" onclick="setCategory('{{ c.slug }}')"><img src='{{ c.image.url }}' height='40' alt='{{ c.name }}' style="display: inline; vertical-align: middle" /></a>
+</li>
+{% endfor %}
+</ul>
+<div class="catTab"></div>
+</cat>
+{% for category, articles in categoryMap.items %}
+<div id="{{ category.slug }}" style="display: none">
+    <a href="{{ category.slug }}"><h3 id="aTitle">{{ category.name }} <img src='{{ category.image.url }}' height='30' alt='{{ category.name }}' style="padding-left: 5px; display: inline; vertical-align: middle" /></h3></a>
+{{ category.description|markdownify|safe }}
+<hr />
+{% if articles %}
+{% for a in articles %}
+<section>
+    <h3><i>{{ a.created }}</i><span class="spacer"></span> » <span class="spacer"></span><a class="titleLink" href="article/{{ a.slug }}">{{ a.title }}</a></h3>
+</section>
+{% endfor %}
+<hr />
+<div style="width: 100%; text-align: center; padding: 10px"><a href="{{ category.slug }}">All Articles in Category</a></div>
+{% else %}
+
+<h3> No Articles Yet! </h3>
+
+{% endif %}
+</div>
+{% endfor %}
+
+<script type="text/javascript">
+
+    var currentC = null;
+
+    function setCategory(c) {
+        if (currentC != null) {
+            document.getElementById(currentC).style.display = "none";
+            document.getElementById(currentC+"Link").style.borderBottomColor = "#228B22";
+        }
+        document.getElementById(c).style.display = "block";
+        document.getElementById(c+"Link").style.borderBottomColor = "white";
+        currentC = c;
+    }
+
+    function setup() {
+        setCategory('updates');
+    }
+    window.onload = setup;
+
+</script>
+
+{% endblock %}

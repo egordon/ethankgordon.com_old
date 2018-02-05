@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% load markdown_filter %}
+
+{% block title %}{{ category.name }} | Blog{% endblock %}
+
+{% block content %}
+<style>
+#aTitle {
+    margin-bottom: 5px;
+}
+
+.titleLink {
+    color: gray;
+}
+
+a:visited .titleLink {
+    color: gray;
+}
+
+.spacer {
+    display: inline-block;
+    width: 10px;
+}
+</style>
+<h1 id="aTitle">{{ category.name }} <img src='{{ category.image.url }}' height='40' alt='{{ category.name }}' style="padding-left: 5px; display: inline; vertical-align: middle" /></h1>
+{{ category.description|markdownify|safe }}
+<hr />
+{% if articles %}
+{% for a in articles %}
+<section>
+    <h3><i>{{ a.created }}</i><span class="spacer"></span> » <span class="spacer"></span><a class="titleLink" href="../article/{{ a.slug }}">{{ a.title }}</a></h3>
+</section>
+{% endfor %}
+{% else %}
+<h3> No Articles Yet!</h3>
+{% endif %}
+<hr />
+<div style="padding:10px"><a href="../">&lt;&lt; Back to Blog</a></div>
+{% endblock %}
