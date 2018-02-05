@@ -105,7 +105,6 @@ ethankgordon/settings.py
 
 # Collected static files
 /static/
-/ethankgordon/static/
 
 # User-uploaded media
 media/
